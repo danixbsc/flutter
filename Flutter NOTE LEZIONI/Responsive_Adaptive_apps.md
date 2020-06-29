@@ -7,6 +7,9 @@
  * [MEDIQUERY per ricavare le dimensioni](#classe-mediaquery-per-il-calcolo-delle-dimensioni)
  * [Calcolare lo spazio a disposizione di un widget](#calcolare-lo-spazio-a-disposizione-di-un-widget)
  * [TextScaleFactor](#mediaquery-textscalefactor)
+ * [Adattare le dimensioni di un widget a seconda del widget padre](#adattare-le-dimensioni-di-un-widget-a-seconda-del-widget-padre-layout-builder-udemy-n119)
+ * [Gestire cambio di orientamento del dispositivo](#gestire-cambio-di-orientamento-del-dispositivo)
+ * [Calcolare la parte di schermo oscurata dalla tastiera](#calcolare-la-parte-di-schermo-oscurata-dalla-tastiera-udemy-n124)
 
 
 # Significato di Responsive e Adaptive
