@@ -66,5 +66,6 @@ Esempio di utilizzo del textScaleFactor:
 
 Il fontSize cambierà quindi a seconda dello scale factor.
 
+## Adattare le dimensioni di un widget a seconda del widget padre (LAYOUT BUILDER) (UDEMY n.119)
 
-
+Il WIDGET [**LayoutBuilder**](https://api.flutter.dev/flutter/widgets/LayoutBuilder-class.html) fornisce informazioni sui **costraints** del widget padre in modo da poter adattare di conseguenza le dimensioni del widget figlio
