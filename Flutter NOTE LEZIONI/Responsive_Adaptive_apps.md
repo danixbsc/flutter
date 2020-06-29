@@ -6,6 +6,7 @@
 [Calcolo delle dimensioni in modo dinamico](#calcolare-le-dimensioni-in-modo-dinamico)
  * [MEDIQUERY per ricavare le dimensioni](#classe-mediaquery-per-il-calcolo-delle-dimensioni)
  * [Calcolare lo spazio a disposizione di un widget](#calcolare-lo-spazio-a-disposizione-di-un-widget)
+ * [TextScaleFactor](#mediaquery-textscalefactor)
 
 
 # Significato di Responsive e Adaptive
@@ -75,3 +76,24 @@ Il fontSize cambierà quindi a seconda dello scale factor.
 Il WIDGET [**LayoutBuilder**](https://api.flutter.dev/flutter/widgets/LayoutBuilder-class.html) fornisce informazioni sui **costraints** del widget padre in modo da poter adattare di conseguenza le dimensioni del widget figlio
 
 ## Gestire cambio di orientamento del dispositivo
+Flutter ha un widget chiamato **Switch** che che ha un **value** che può essere vero o falso se é attivo o meno.
+
+In questo widget può essere memorizzata una funzione che viene eseguita nel momento in cui il valore viene cambiato.
+
+## Calcolare la parte di schermo oscurata dalla tastiera (UDEMY n.124)
+Grazie in Mediaquery la proprietà **viewInsets** di MediaQuery da informazioni sulla parte di schermo oscurata dalla UI.
+
+La parte di UI occupata dalla tastiera si ottiene dalla proprietà **bottom** di viewInsets.
+
+*Esempio: calcolare il padding inferiore di un container per far si che gli elementi siano al di sopra della tastiera:*
+
+``` Dart
+Container(
+   padding: EdgeInsets.only(
+      top: 10,
+      left: 10,
+      right: 10,
+      bottom: MediaQuery.of(context).viewInsets.bottom + 10,
+   )
+)
+```

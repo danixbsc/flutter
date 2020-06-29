@@ -19,56 +19,63 @@ class _NewTransactionState extends State<NewTransaction> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 5,
-      child: Container(
-        padding: EdgeInsets.all(10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(labelText: 'Title'),
-              keyboardType: TextInputType.text,
-              //onChanged:(value) => _titleInput = value,
-              controller: _titleController,
-              onSubmitted: (_) => _submitData(),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'Amount'),
-              keyboardType: TextInputType.number,
-              //onChanged: (value) => _amountInput = value,
-              controller: _amountController,
-              onSubmitted: (_) => _submitData(),
-            ),
-            Container(
-              height: 70,
-              child: Row(children: <Widget>[
-                Expanded(
-                  child: Text(_selectedDate == null
-                      ? 'No Date Chosen!'
-                      : DateFormat('d/MMMM/y, EEEE', 'it_IT')
-                          .format(_selectedDate)),
-                ),
-                FlatButton(
-                    child: Text(
-                      'CHOOSE DATE',
-                      style: Theme.of(context)
-                          .textTheme
-                          .button
-                          .copyWith(color: Theme.of(context).primaryColor),
-                    ),
-                    onPressed: _presentDatePicker),
-              ]),
-            ),
-            RaisedButton(
-              child: Text(
-                'ADD TRANSACTION',
-                style: Theme.of(context).textTheme.button,
+    return SingleChildScrollView(
+      child: Card(
+        elevation: 5,
+        child: Container(
+          padding: EdgeInsets.only(
+            top: 10,
+            left: 10,
+            right: 10,
+            bottom: MediaQuery.of(context).viewInsets.bottom + 10,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              TextField(
+                decoration: InputDecoration(labelText: 'Title'),
+                keyboardType: TextInputType.text,
+                //onChanged:(value) => _titleInput = value,
+                controller: _titleController,
+                onSubmitted: (_) => _submitData(),
               ),
-              textColor: Colors.purple,
-              onPressed: _submitData,
-            ),
-          ],
+              TextField(
+                decoration: InputDecoration(labelText: 'Amount'),
+                keyboardType: TextInputType.number,
+                //onChanged: (value) => _amountInput = value,
+                controller: _amountController,
+                onSubmitted: (_) => _submitData(),
+              ),
+              Container(
+                height: 70,
+                child: Row(children: <Widget>[
+                  Expanded(
+                    child: Text(_selectedDate == null
+                        ? 'No Date Chosen!'
+                        : DateFormat('d/MMMM/y, EEEE', 'it_IT')
+                            .format(_selectedDate)),
+                  ),
+                  FlatButton(
+                      child: Text(
+                        'CHOOSE DATE',
+                        style: Theme.of(context)
+                            .textTheme
+                            .button
+                            .copyWith(color: Theme.of(context).primaryColor),
+                      ),
+                      onPressed: _presentDatePicker),
+                ]),
+              ),
+              RaisedButton(
+                child: Text(
+                  'ADD TRANSACTION',
+                  style: Theme.of(context).textTheme.button,
+                ),
+                textColor: Colors.purple,
+                onPressed: _submitData,
+              ),
+            ],
+          ),
         ),
       ),
     );
