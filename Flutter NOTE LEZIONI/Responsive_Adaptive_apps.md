@@ -61,11 +61,17 @@ e cambiare le foglie dell'**albero dei widget** di conseguenza.
 > l'utente può cambiare questo dato dalle impostazioni del telefono.
 
 Esempio di utilizzo del textScaleFactor:
-> `final curScaleFactor = MediaQuery.of(context).textScaleFactor;`
-> `Text('This changes!', style: TextStyle(fontSize: 20 * curScaleFactor));
+
+``` Dart
+final curScaleFactor = MediaQuery.of(context).textScaleFactor;
+Text("This changes!", style: TextStyle(fontSize: 20 * curScaleFactor));
+```
+
 
 Il fontSize cambierà quindi a seconda dello scale factor.
 
 ## Adattare le dimensioni di un widget a seconda del widget padre (LAYOUT BUILDER) (UDEMY n.119)
 
 Il WIDGET [**LayoutBuilder**](https://api.flutter.dev/flutter/widgets/LayoutBuilder-class.html) fornisce informazioni sui **costraints** del widget padre in modo da poter adattare di conseguenza le dimensioni del widget figlio
+
+## Gestire cambio di orientamento del dispositivo
