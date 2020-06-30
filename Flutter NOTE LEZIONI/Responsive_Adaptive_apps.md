@@ -10,6 +10,8 @@
  * [Adattare le dimensioni di un widget a seconda del widget padre](#adattare-le-dimensioni-di-un-widget-a-seconda-del-widget-padre-layout-builder-udemy-n119)
  * [Gestire cambio di orientamento del dispositivo](#gestire-cambio-di-orientamento-del-dispositivo)
  * [Calcolare la parte di schermo oscurata dalla tastiera](#calcolare-la-parte-di-schermo-oscurata-dalla-tastiera-udemy-n124)
+  
+[Adattare lo stile ai diversi OS](#adattare-lo-stile-sui-differenti-os)
 
 
 # Significato di Responsive e Adaptive
@@ -99,4 +101,21 @@ Container(
       bottom: MediaQuery.of(context).viewInsets.bottom + 10,
    )
 )
+```
+# Adattare lo stile sui differenti OS
+Alcuni widget hanno un costruttore *adaptive* che in automatico cambierà lo stile del widget a seconda che si trovi su *android* o su *IOS*.
+
+*Esempio:*
+``` Dart
+   Switch.adaptive(
+      value: true,
+      onChanged: (){},
+   );
+```
+Il *FloatingActionButton* non é uno standard per le app *IOS*, per questo motivo va utilizzato solo se ci troviamo su *Android*.
+
+```Dart
+   import 'dart:io'
+
+   Platform.isAndroid ?  FloatingButton(...) : 
 ```
