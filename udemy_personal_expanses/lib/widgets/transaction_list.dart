@@ -57,6 +57,7 @@ class TransactionList extends StatelessWidget {
                       ? FlatButton.icon(
                           icon: Icon(Icons.delete),
                           textColor: Theme.of(context).colorScheme.error,
+                          label: Text("Delete"),
                           onPressed: () =>
                               deleteTransaction(transactions[index].id),
                         )
