@@ -14,7 +14,8 @@
 [Adattare lo stile ai diversi OS](#adattare-lo-stile-sui-differenti-os)
  * [Scaffold per le app IOS](#scaffold-per-le-app-ios-lezione-128)
    * [Gestire differenti scaffold](#gestire-differenti-scaffold)
-   * [Cupertino NavigationBar](#cupertino-navigationbar)
+ * [Cupertino NavigationBar](#cupertino-navigationbar)
+ * [Fixare visualizzazione del body per IOS](#fixare-visualizzazione-del-body-per-ios) 
 
 
 # Significato di Responsive e Adaptive
@@ -182,3 +183,6 @@ la variabile appBar la dichiariamo come tipo *PreferredSizwWidget* perchè *Dart
 
 ## Cupertino NavigationBar
 La proprietà *middle* é il titolo, la proprietà *trailing* sono le Actions
+
+## Fixare visualizzazione del body per IOS (LEZIONE 129)
+Per evitare che la navigation bar si sovrapponga con i widget del body circondiamo il body con un widget chiamato *SafeArea*.
